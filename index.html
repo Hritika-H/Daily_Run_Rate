@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Daily Run Rate</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/dubrox/Multiple-Dates-Picker-for-jQuery-UI@master/jquery-ui.multidatespicker.js"></script>
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">  
+</head>
+  <body>
+    <h1>Daily Run Rate</h1>
+    <input id="addButton" type="button" value="Add New" onclick="addnew()" />
+
+    <div class="table_container">
+        <table id="drrTable">
+            <tr>
+                <th>Action</th>
+                <th>ID</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Month, Year</th>
+                <th>Date Excluded</th>
+                <th>Number of Days</th>
+                <th>Lead Count</th>
+                <th>Expected DRR</th>
+                <th>Last Updated</th>
+            </tr>
+            <tr id="mainform">
+               <td>-</td>
+               <td>-</td>
+               <td> <input type="date" id="startDate"/> </td>
+               <td> <input type="date" id="endDate" /> </td>
+               <td>-</td>
+               <td> <input type="text" id="datePick" /> </td>
+               <td>-</td>
+               <td> <input id="leadCount" type="number"></td>
+               <td>-</td>
+               <td> 
+                <input id="saveButton" type="button" value="Save" onclick="onSave()" />
+                <input id="cancelButton" type="button" value="Cancel" onclick="onCancel()" /> 
+              </td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="drr.js"></script>
+
+  </body>
+</html>
